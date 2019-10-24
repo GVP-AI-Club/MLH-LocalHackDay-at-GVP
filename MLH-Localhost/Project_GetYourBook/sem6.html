@@ -1,0 +1,47 @@
+<html>
+    <head>
+    	<script type="text/javascript">
+    		function valid(value)
+    		{
+    			console.log('button clicked')
+    			console.log(value)
+             var str="/"+document.forms["sem6"]["sem"].value+"/"+value;
+             // console.log(str);
+             getData();
+    		}
+    		//var apiUrl = "localhost:5055";
+      /* var input = document.querySelector(".pokemon-input");
+    var pokemonName = document.querySelector(".pokemon-name");
+    var pokemonImage = document.querySelector(".pokemon-image");
+    */
+           function getData() {
+            axios.get(str)
+            .then(function (response) {
+            document.getElementById('01').innerHTML = response.data;
+            
+           })
+            .catch(function (error) {
+               document.getElementById('01').innerHTML = "(An error has occurred.)";
+           });
+    }
+
+    /*var button = document.querySelector(".pokemon-button");
+    button.addEventListener("click", getPokemonData);*/
+    	
+    	</script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.0/axios.js"></script>
+    </head>
+    <body align="center">
+    	<pre>
+            <img src="gvpbanner.jpg">
+            <br><br>
+            <a href="http://localhost:5070/sem6/IP"><button type="button" >ImageProcessing</button></a>
+
+
+            <a href="http://localhost:5070/sem6/CD"><button type="button" >COMPILER DESIGN</button></a>
+
+
+            <a href="http://localhost:5070/sem6/CN"><button type="button" >ComputerNetworks</button></a>
+          </pre>
+    </body>
+</html>
