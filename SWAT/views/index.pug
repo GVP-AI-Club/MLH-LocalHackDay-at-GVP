@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  form(method="post",enctype="multipart/form-data",action="/")
+    p
+      input(type="file",name="upl")
+    p
+      input(type="submit")
